@@ -1,0 +1,12 @@
+ai_env/
+venv/
+env/
+
+traffic_predictor
+
+create_model.py
+
+traffic_model.onnx
+
+vel.csv:Zone.Identifier
+vel.csv
