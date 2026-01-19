@@ -10,3 +10,7 @@ traffic_model.onnx
 
 vel.csv:Zone.Identifier
 vel.csv
+
+mjerenja.csv
+
+proba.py
