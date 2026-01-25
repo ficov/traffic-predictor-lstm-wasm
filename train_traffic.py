@@ -8,7 +8,7 @@ import shutil
 
 CSV_FILE = 'vel.csv'
 LOOKBACK = 12        
-TRAIN_SENSOR_ROW = 0 
+TRAIN_SENSOR_INDEX = 0 
 EPOCHS = 10
 SAVED_MODEL_DIR = "traffic_saved_model" # mapa gdje se sprema model
 
@@ -19,7 +19,9 @@ if not os.path.exists(CSV_FILE):
     exit()
 
 df = pd.read_csv(CSV_FILE, header=None)
-train_data = df.iloc[TRAIN_SENSOR_ROW].values.astype('float32')
+train_data = df.iloc[:, TRAIN_SENSOR_INDEX].values.astype('float32') # stupci su senzori, redovi su vremenski koraci
+
+print(f"Učitano {len(train_data)} mjerenja za senzor u stupcu {TRAIN_SENSOR_INDEX}.")
 
 # SLIDING WINDOW PRIPREMA PODATAKA
 def create_dataset(dataset, look_back=12):
