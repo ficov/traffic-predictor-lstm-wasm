@@ -25,7 +25,7 @@ pip install "numpy<2.0" pandas tensorflow "tf2onnx>=1.16.0"
   ```
   (dobivena datoteka **traffic_lstm.onnx**)
   
-## Kompajliranje i pokretanje (Rust i WebAssembly)
+## Kompajliranje i pokretanje (Rust i WebAssembly):
 - instalacija podrške za WASI (WebAssembly System Interface) unutar Rust-a:
 ```bash
 rustup target add wasm32-wasip1
