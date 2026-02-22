@@ -47,7 +47,7 @@ model.compile(optimizer='adam', loss='mse')
 model.fit(X_train, y_train, epochs=EPOCHS, batch_size=32, verbose=1) #treniranje
 
 # SPREMANJE (EXPORT) - TensorFlow SavedModel format:
-# .pb -> protobuffer datoteka s grafom modela
+# saved_model.pb -> glavna datoteka modela
 # variables/ -> mapa s težinama modela
 # assets/ -> dodatne datoteke (npr. tokenizer), može biti prazna
 # fingerprint -> datoteka s hash vrijednostima za provjeru integriteta
